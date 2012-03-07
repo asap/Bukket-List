@@ -33,7 +33,7 @@ ehthumbs.db
 Icon?
 Thumbs.db
 
-/app/Config
+/app/Config/database.php
 /app/tmp
 /lib/Cake/Console/Templates/skel/tmp/
 /plugins
