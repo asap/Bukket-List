@@ -1,9 +1,20 @@
-<h1><?php echo $bukket_lists['BukketList']['title']?></h1>
+<article>
+	<header>
+		<h1><?php echo $bukket_lists['BukketList']['title']?></h1>
+	</header>
+	<section>
+		<pre><?php echo $bukket_lists['BukketList']['items'] ?></pre>
+	</section>
 
-<p><small>Created: <?php echo $bukket_lists['BukketList']['created']?></small></p>
-<p><small>Modified: <?php echo $bukket_lists['BukketList']['modified']?></small></p>
+	<footer>
+		<p>Created on <?php echo $bukket_lists['BukketList']['created']?> by You</p>
+		<p>Modified on <?php echo $bukket_lists['BukketList']['modified']?> by You</p>
+		<p>Shared on Twitter, Facebook, and Google+</p>
+	</footer>
+</article>
 
 
-<p><pre><?php echo $bukket_lists['BukketList']['items']?></pre></p>
-
-<?php echo $this->Html->link('Back to Lists', array('controller' => 'bukket_lists', 'action' => 'index')); ?>
+<aside style="display:none;">
+	<h3>Task Complete!</h3>
+	<p>Looking good Chief! Another thing off your list</p>
+</aside>

@@ -13,9 +13,15 @@
 
 	<meta name="viewport" content="width=device-width">
 
-	<link rel="stylesheet" href="css/style.css">
+	<?php echo $this->Html->css('style.css'); ?>
 
 	<script src="js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+	
+	<style type="text/css" media="screen">
+		article section{ font-size: 1.5em; line-height: 2em; }
+		article footer p { font-size: .7em; }
+	</style>
+
 </head>
 <body>
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
@@ -25,7 +31,8 @@
 			<h1 id="title">Bukket List</h1>
 			<nav>
 				<ul>
-					<li><a href="#">Manage Lists</a></li>
+					<li><?php echo $this->Html->link('Manage Lists', array('controller' => 'bukket_lists', 'action' => 'index')); ?>
+					</li>
 					<li><a href="#">Settings</a></li>
 					<li><a href="#">Log Out</a></li>
 				</ul>
@@ -35,32 +42,7 @@
 	<div id="main-container">
 		<div id="main" class="wrapper clearfix">
 			
-			<article>
-				<header>
-					<h1>My List</h1>
-				</header>
-				<section>
-					<ul>
-						<li>Lorem ipsum dolor sit amet</li>
-						<li>consectetur adipiscing elit.</li>
-						<li>Aliquam sodales urna non odio egestas tempor.</li>
-						<li>Nunc vel vehicula ante.</li>
-						<li>Etiam bibendum iaculis libero, eget molestie nisl pharetra in.</li>
-						<li>In semper consequat est, eu porta velit mollis nec.</li>
-					</ul>
-				</section>
-
-				<footer>
-					<p>Created on Dec 28, 1971 by You</p>
-					<p>Modified on Nov 18, 2012 by You</p>
-					<p>Shared on Twitter, Facebook, and Google+</p>
-				</footer>
-			</article>
-			
-			<aside>
-				<h3>Task Complete!</h3>
-				<p>Looking good Chief! Another thing off your list</p>
-			</aside>
+			<?php echo $content_for_layout; ?>
 			
 		</div> <!-- #main -->
 	</div> <!-- #main-container -->
