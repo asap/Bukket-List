@@ -14,8 +14,9 @@ class BukketListsController extends AppController {
 		    }
 		
     public function add() {
-        if ($this->request->is('bukket_list')) {
+        if ($this->request->is('post')) { //changed the bukket_list to post because the method we are doing is a post - was.
             if ($this->BukketList->save($this->request->data)) {
+            	$this->request->data;
                 $this->Session->setFlash('Your Bukket List has been saved.');
                 $this->redirect(array('action' => 'index'));
             } else {
