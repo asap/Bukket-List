@@ -14,12 +14,16 @@
 	<meta name="viewport" content="width=device-width">
 
 	<?php echo $this->Html->css('style.css'); ?>
+	<?php echo $this->Html->css('custom.css'); ?>
+
 
 	<script src="js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
 	
 	<style type="text/css" media="screen">
 		article section{ font-size: 1.5em; line-height: 2em; }
 		article footer p { font-size: .7em; }
+		#main table{ width: 100%; }
+		#main table thead tr th{ text-align: left; }
 	</style>
 
 </head>
