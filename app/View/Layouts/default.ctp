@@ -37,8 +37,8 @@
 				<ul>
 					<li><?php echo $this->Html->link('Manage Lists', array('controller' => 'bukket_lists', 'action' => 'index')); ?>
 					</li>
-					<li><a href="#">Settings</a></li>
-					<li><a href="#">Log Out</a></li>
+					<li><a href="#" class="beta_disabled">Settings</a></li>
+					<li><a href="#" class="beta_disabled">Log Out</a></li>
 				</ul>
 			</nav>
 		</header>
