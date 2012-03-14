@@ -3,7 +3,7 @@
 */
 
 
-$(document).ready(function(){
+jQuery(document).ready(function($){
 	$('#main ul li').hover(function(){
 		$(this).children('span.controls').fadeToggle( 'fast' );
 	});
@@ -12,6 +12,9 @@ $(document).ready(function(){
 		'click', function(){
 		alert(" Sorry, that don't work yet" );
 	});
+
+	$('.title_prompt').prompt('Enter your Title');
+
 });
 
 
