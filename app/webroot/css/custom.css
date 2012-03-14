@@ -1,9 +1,29 @@
+/** Colors 
+ *
+ *	Main Orange 		: #E44D26;
+ *	Dark Orange 		: #97290D;
+ *	Peach 				: #FF6A44;
+ *	Complimentary Green : #009767;
+ *	Complimentary Mint  : $26E4A7;
+ *
+**/
+
+
+
+
 .input label{
 	display: block;
 }
 
 input, textarea{
 	font-size: 1.3em;
+}
+
+.btn{
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	padding: 6px;
 }
 
 .fatwide{
@@ -26,6 +46,11 @@ input, textarea{
 	background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
 }
+a.orange, a.orange:visited{
+	text-decoration: none !important;
+	color: #fef4e9 !important;
+}
+
 .orange:hover {
 	background: #f47c20;
 	background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
@@ -38,3 +63,39 @@ input, textarea{
 	background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');
 }
+
+#main{}
+#main ul{}
+#main ul li{
+	list-style: none;
+	padding: 1%;
+}
+#main li{}
+#main li a{
+	text-decoration: none;
+	color: #E44D26
+}
+#main li:hover{
+	background: #ffe;
+}
+#main li .title{
+	font-size: 1.8em;
+	line-height: 2em;
+}
+#main li .controls{ 
+	padding: 1%; 
+	display: none; 
+}
+#main li .edit, #main li .delete{
+	display: inline;
+}
+#main li .edit a, #main li .delete a{ 	color: #009767; }
+
+#main li .modified{
+	float: right;
+	color: #666;
+	position: relative;
+	right: 0;
+	line-height: 3em;
+}
+.

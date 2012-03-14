@@ -1,7 +1,7 @@
 <?php
 class BukketListsController extends AppController {
     public $name = 'BukketLists';
-    public $helpers = array('Html', 'Form');
+    public $helpers = array('Html', 'Form', 'Cycle');
 		public $components = array('Session');
 		
 		public function index() {
