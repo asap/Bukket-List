@@ -8,7 +8,8 @@ $(document).ready(function(){
 		$(this).children('span.controls').fadeToggle( 'fast' );
 	});
 
-	$('a.beta_disabled').click(function(){
+	$('a.beta_disabled').live(
+		'click', function(){
 		alert(" Sorry, that don't work yet" );
 	});
 });
