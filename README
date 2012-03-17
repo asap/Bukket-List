@@ -29,7 +29,7 @@ return array(
 	'persistent' => false,
 	'host' => 'localhost',
 	'login' => 'root',
-	'password' => 'green15',
-	'database' => 'noeljramos',
+	'password' => '',
+	'database' => '',
 	'prefix' => ''
 );
