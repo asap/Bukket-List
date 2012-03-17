@@ -1,3 +1,9 @@
+<?php echo $this->Html->link(
+        'Create New List', 
+        array('controller' => 'bukket_lists', 'action' => 'add'),
+        array('class' => 'orange btn' )
+    ); ?>
+
 <ul>
 
 <?php foreach ($bukket_lists as $bukket_list): ?>
@@ -17,9 +23,3 @@ array('controller' => 'bukket_lists', 'action' => 'view', $bukket_list['BukketLi
 
 <?php endforeach; ?>
 </ul>
-
-<?php echo $this->Html->link(
-        'Create New List', 
-        array('controller' => 'bukket_lists', 'action' => 'add'),
-        array('class' => 'orange btn' )
-    ); ?>
