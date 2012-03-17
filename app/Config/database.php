@@ -59,25 +59,28 @@
  */
 class DATABASE_CONFIG {
 
-	public $default = array(
+	// @TODO: Set up all the environments
+	public $production = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' => 'localhost',
-		'login' => 'user',
-		'password' => 'password',
-		'database' => 'database_name',
-		'prefix' => '',
-		//'encoding' => 'utf8',
+		'host' 		 => '',
+		'login'      => '',
+		'password'   => '',
+		'database'   => '',
+		'prefix'     => ''
 	);
 
-	public $test = array(
-		'datasource' => 'Database/Mysql',
-		'persistent' => false,
-		'host' => 'localhost',
-		'login' => 'user',
-		'password' => 'password',
-		'database' => 'test_database_name',
-		'prefix' => '',
-		//'encoding' => 'utf8',
-	);
+	public function __construct()
+	{
+		$env = getenv('CAKE_ENV');
+		if ($env == 'local' && file_exists(dirname(__FILE__) . '/database-local.php')) {
+			$this->default = include_once('database-local.php');
+		}
+		else if (isset($this->$env)){
+			$this->default = $this->$env;
+		}
+		else {
+			$this->default = $this->production;
+		}
+	}
 }
