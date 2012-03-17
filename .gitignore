@@ -32,7 +32,6 @@ Icon?
 /plugins
 .DS_Store*
 *.7z
-/app/tmp
 *.tar
 # Logs and databases #
 *.gz
