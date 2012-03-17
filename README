@@ -14,3 +14,22 @@ CREATE TABLE `bukket_lists` (
   `created` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+
+
+Then you'll want to create some local files that won't be committed.
+
+1. Create a file called core-local.php and put this:
+<?php
+Configure::write('debug', 2);
+
+2. Create a file called database-local.php and substitute this with your DB settings:
+<?php
+return array(
+	'datasource' => 'Database/Mysql',
+	'persistent' => false,
+	'host' => 'localhost',
+	'login' => 'root',
+	'password' => 'green15',
+	'database' => 'noeljramos',
+	'prefix' => ''
+);
