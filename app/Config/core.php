@@ -56,7 +56,7 @@
 
 /**
  * Configure the Exception handler used for uncaught exceptions.  By default,
- * ErrorHandler::handleException() is used. It will display a HTML page for the exception, and
+ * ErrorHandler::handleException() is used. It will display a HTML pag~e for the exception, and
  * while debug > 0, framework errors like Missing Controller will be displayed.  When debug = 0,
  * framework errors will be coerced into generic HTTP errors.
  *
