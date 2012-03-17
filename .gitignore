@@ -1,9 +1,6 @@
 *.iso
 # Compiled source #
 app/Config/database-local.php
-app/tmp/logs/error.log
-app/tmp/cache/persistent/*
-app/tmp/cache/models/*
 app/Config/core-local.php
 *.rar
 /vendors
