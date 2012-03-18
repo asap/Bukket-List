@@ -20,6 +20,8 @@ Then you'll want to create some local files that won't be committed.
 
 1. Create a file called core-local.php and put this:
 <?php
+ini_set('display_errors', 1);
+ini_set('html_errors', 1);
 Configure::write('debug', 2);
 
 2. Create a file called database-local.php and substitute this with your DB settings:
@@ -33,3 +35,6 @@ return array(
 	'database' => '',
 	'prefix' => ''
 );
+
+3. Edit your VHOST file for this project, anywhere inside the virtual host tag, add:
+SetEnv CAKE_ENV local
