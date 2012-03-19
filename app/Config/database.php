@@ -73,7 +73,8 @@ class DATABASE_CONFIG {
 	public function __construct()
 	{
 		$env = getenv('CAKE_ENV');
-		if ($env == 'local' && file_exists(dirname(__FILE__) . '/database-local.php')) {
+
+		if ($env == 'local'&& file_exists(dirname(__FILE__) . '/database-local.php')) {
 			$this->default = include_once('database-local.php');
 		}
 		else if (isset($this->$env)){
