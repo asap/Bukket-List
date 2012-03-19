@@ -63,10 +63,10 @@ class DATABASE_CONFIG {
 	public $production = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' 		 => 'localhost',
-		'login'      => 'root',
-		'password'   => '7243acc',
-		'database'   => 'bukket_lists',
+		'host' 		 => '',
+		'login'      => '',
+		'password'   => '',
+		'database'   => '',
 		'prefix'     => ''
 	);
 
