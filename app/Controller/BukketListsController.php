@@ -4,7 +4,7 @@ class BukketListsController extends AppController {
     public $helpers = array('Html', 'Form');
 		public $components = array('Session');
 		
-		public function index() {
+		public function index() {				
 		        $this->set('bukket_lists', $this->BukketList->find('all'));
 		    }
 		

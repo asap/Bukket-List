@@ -631,9 +631,9 @@ class Model extends Object {
  * @param string $table Name of database table to use.
  * @param string $ds DataSource connection name.
  */
-	public function __construct($id = false, $table = null, $ds = null) {
+	public function __construct($id = false, $table = null, $ds = null) {		
 		parent::__construct();
-
+		
 		if (is_array($id)) {
 			extract(array_merge(
 				array(
@@ -645,6 +645,7 @@ class Model extends Object {
 		}
 
 		if ($this->name === null) {
+			//var_dump(get_class($this));
 			$this->name = (isset($name) ? $name : get_class($this));
 		}
 
@@ -1493,7 +1494,6 @@ class Model extends Object {
 	public function saveField($name, $value, $validate = false) {
 		$id = $this->id;
 		$this->create(false);
-
 		if (is_array($validate)) {
 			$options = array_merge(array('validate' => false, 'fieldList' => array($name)), $validate);
 		} else {
@@ -1515,7 +1515,7 @@ class Model extends Object {
  * @link http://book.cakephp.org/2.0/en/models/saving-your-data.html
  */
 	public function save($data = null, $validate = true, $fieldList = array()) {
-		$defaults = array('validate' => true, 'fieldList' => array(), 'callbacks' => true);
+		$defaults = array('validate' => true, 'fieldList' => array(), 'callbacks' => true);		
 		$_whitelist = $this->whitelist;
 		$fields = array();
 
