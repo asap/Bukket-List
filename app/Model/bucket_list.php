@@ -16,6 +16,7 @@ class BukketList extends AppModel{
       		'this_field_can_not_be_empty' => array(
       			'rule' => 'notEmpty',
       			'message' => 'Um... you forgot to fill this one too.'
-      	)
+            )
+        )
   );
 }
