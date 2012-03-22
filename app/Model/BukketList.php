@@ -4,8 +4,7 @@ class BukketList extends AppModel{
 	public $validate = array(
       'title' => array(     
             'this_field_can_not_be_empty' => array(
-                'rule' => 'notEmpty',
-                'required' => true,
+                'rule' => 'notEmpty',                
                 'message' => 'Wait, fill this out first.'
               ),
 
@@ -17,8 +16,7 @@ class BukketList extends AppModel{
       'items' => array(
       		'this_field_can_not_be_empty' => array(
       			'rule' => 'notEmpty',
-            'required' => true,
-      			'message' => 'Um... you forgot to fill this one too.'
+            'message' => 'Um... you forgot to fill this one.'
             )
         )
   );
