@@ -306,7 +306,7 @@ class Cache {
 					$key,
 					self::$_engines[$config]->settings['engine']
 				),
-				E_USER_WARNING
+				E_USER_WARNING				
 			);
 		}
 		return $success;
