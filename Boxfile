@@ -1,6 +1,6 @@
 web1:
     name: uat
     shared_writable_dirs: 
-        - tmp/cache/models
-        - tmp/cache/persistent
-        - tmp/logs
+        - app/tmp/cache/models
+        - app/tmp/cache/persistent
+        - app/tmp/logs
