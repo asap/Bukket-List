@@ -92,7 +92,7 @@
  *
  * And uncomment the App.baseUrl below:
  */
-	Configure::write('App.baseUrl', env('SCRIPT_NAME'));
+	//Configure::write('App.baseUrl', env('SCRIPT_NAME'));
 
 /**
  * Uncomment the define below to use CakePHP prefix routes.
@@ -331,7 +331,7 @@ Cache::config('_cake_model_', array(
 	'serialize' => ($engine === 'File'),
 	'duration' => $duration
 ));
-//var_dump(dirname(__FILE__));
+
 if (file_exists(dirname(__FILE__) . '/core-local.php')) {
 	include_once('core-local.php');
 }
