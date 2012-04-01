@@ -4,8 +4,15 @@
 	echo $this->Form->input('title', array( 'class' => 'fatwide title_prompt' ) );
 
 	// @TODO: Make this dynamic by adding a button which would clone this input
-	for($i = 1; $i < 8; $i++) {
-		echo $this->Form->input("item.$i.value", array('type' => 'text', 'class' => 'fatwide'));
+	for($i = 0; $i < 7; $i++) {
+		echo $this->Form->input(
+			"BukketListItem.$i.value",
+			array(
+				'type' => 'text',
+				'class' => 'fatwide',
+				'label' => 'Value ' . ($i + 1)
+			)
+		);
 	}
 
 	echo $this->Form->end(array( 'label' => 'Save Bukket List', 'class' => 'fatwide orange'));

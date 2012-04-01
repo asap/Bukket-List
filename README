@@ -14,10 +14,10 @@ CREATE TABLE `bukket_lists` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6;
 
-CREATE TABLE `bukket_lists_item` (
+CREATE TABLE `bukket_list_items` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `bukket_lists_id` int(11) NOT NULL,
-  `title` varchar(255) NOT NULL,
+  `value` varchar(255) NOT NULL,
   `modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`id`),

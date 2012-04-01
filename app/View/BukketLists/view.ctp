@@ -3,7 +3,9 @@
 		<h1><?php echo $bukket_lists['BukketList']['title']?></h1>
 	</header>
 	<section>
-		<pre><?php echo $bukket_lists['BukketList']['items'] ?></pre>
+		<?php foreach ($bukket_lists['BukketListItem'] as $bukketListItem): ?>
+			<pre><?php echo $bukketListItem['value'] ?></pre>
+		<?php endforeach; ?>
 	</section>
 
 	<footer>
