@@ -4,9 +4,10 @@ class BukketListsController extends AppController {
     public $helpers = array('Html', 'Form');
 		public $components = array('Session');
 		
-		public function index() {				
-		        $this->set('bukket_lists', $this->BukketList->find('all'));
-		    }
+		public function index()
+		{
+		    $this->set('bukket_lists', $this->BukketList->find('all'));
+		}
 		
 		public function view($id = null) {
 		        $this->BukketList->id = $id;
@@ -15,8 +16,7 @@ class BukketListsController extends AppController {
 		
     public function add() {
         if ($this->request->is('post')) {
-            if ($this->BukketList->save($this->request->data)) {
-            	$this->request->data;
+            if ($this->BukketList->saveAssociated($this->request->data)) {
                 $this->Session->setFlash('Your Bukket List has been saved.');
                 $this->redirect(array('action' => 'index'));
             } else {
@@ -34,7 +34,7 @@ class BukketListsController extends AppController {
 		    }
 		    else 
 		    {		    	
-		        if ($this->BukketList->save($this->request->data))
+		        if ($this->BukketList->saveAssociated($this->request->data))
 		        {
 		            $this->Session->setFlash('Your bukket list is up to date.');
 		            $this->redirect(array('action' => 'index'));

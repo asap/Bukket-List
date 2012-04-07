@@ -2,6 +2,18 @@
 <?php
 	echo $this->Form->create('BukketList');
 	echo $this->Form->input('title', array( 'class' => 'fatwide title_prompt' ) );
-	echo $this->Form->input('items', array('rows' => '1', 'class' => 'fatwide' ));
-	echo $this->Form->end(array( 'label' => 'Save Bukket List', 'class' => 'fatwide orange' ) );
+
+	// @TODO: Make this dynamic by adding a button which would clone this input
+	for($i = 0; $i < 7; $i++) {
+		echo $this->Form->input(
+			"BukketListItem.$i.value",
+			array(
+				'type' => 'text',
+				'class' => 'fatwide',
+				'label' => 'Value ' . ($i + 1)
+			)
+		);
+	}
+
+	echo $this->Form->end(array( 'label' => 'Save Bukket List', 'class' => 'fatwide orange'));
 ?> 
