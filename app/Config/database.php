@@ -63,10 +63,20 @@ class DATABASE_CONFIG {
 	public $production = array(
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
-		'host' 		 => '',
-		'login'      => '',
-		'password'   => '',
-		'database'   => '',
+		'host' 		 => 'tunnel.pagodabox.com:3306',
+		'login'      => 'sumiko',
+		'password'   => 'D09A6zew',
+		'database'   => 'bukket_list',
+		'prefix'     => ''
+	);
+
+	public $uat = array(
+		'datasource' => 'Database/Mysql',
+		'persistent' => false,
+		'host' 		 => 'tunnel.pagodabox.com:3306',
+		'login'      => 'janie',
+		'password'   => '40rw3RCT',
+		'database'   => 'bukket_list',
 		'prefix'     => ''
 	);
 
