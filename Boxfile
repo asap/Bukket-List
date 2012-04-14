@@ -1,8 +1,8 @@
 web1:
     name: uat
     shared_writable_dirs: 
-        - app/tmp
-        - tmp/cache
+        - /var/www/app/tmp/cache/models/
+        - /var/www/app/tmp/cache/persistent/
     php_extensions:
      - mcrypt
      - mysqli
