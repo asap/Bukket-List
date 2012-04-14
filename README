@@ -45,5 +45,22 @@ return array(
 	'prefix' => ''
 );
 
-3. Edit your VHOST file for this project, anywhere inside the virtual host tag, add:
-SetEnv CAKE_ENV local
+3. Edit your VHOST or Httpd.conf file for this project, anywhere inside the virtual host tag, add this or something similar:
+
+<VirtualHost *:80>
+     DocumentRoot "/path/to/project"
+     ServerName bukket.dev
+
+     <Directory />
+        Options FollowSymLinks
+        AllowOverride All
+     </Directory>
+     <Directory /path/to/project>
+        AllowOverride All
+        Options Indexes FollowSymLinks MultiViews
+        Order Allow,Deny
+        Allow from all
+    </Directory>
+
+     SetEnv CAKE_ENV local
+</VirtualHost>
