@@ -1,6 +1,7 @@
 web1:
     name: uat
-    shared_writable_dirs: 
+    document_root: /app/webroot
+    shared_writable_dirs:
         - app/tmp
         - tmp/cache
     php_extensions:
