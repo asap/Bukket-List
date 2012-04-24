@@ -74,9 +74,9 @@ class DATABASE_CONFIG {
 		'datasource' => 'Database/Mysql',
 		'persistent' => false,
 		'host' 	     => 'tunnel.pagodabox.com',
-		'login'      => 'yong',
-		'password'   => 'wMZkFnlo',
-		'database'   => 'bukket_list',
+		'login'      => 'merideth',
+		'password'   => 'STyCI1HO',
+		'database'   => 'aleida',
 		'prefix'     => ''
 	);
 
